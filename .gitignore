@@ -1,0 +1,53 @@
+# ===== Secrets =====
+.env
+*.env
+!.env.example
+*.key
+*.pem
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Android / Gradle =====
+*.iml
+.gradle/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+*.apk
+*.aab
+*.dex
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# ===== RAG outputs / large artifacts =====
+*.faiss
+chroma_db/
+data/index/
+data/eval_results.jsonl
+event_log.json

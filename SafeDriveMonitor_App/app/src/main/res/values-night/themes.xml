@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.SafeDriveMonitor" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/dark_bg_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item>
+        <item name="android:colorBackground">@color/dark_bg_primary</item>
+        <item name="android:statusBarColor">@color/dark_bg_surface</item>
+        <item name="android:navigationBarColor">@color/dark_bg_primary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+correctness,groundedness,instruction_following,provider,display,n_queries,n_judged,latency_mean_ms,latency_p50_ms,latency_p95_ms,mrr,precision@1,recall@1,f1@1,precision@3,recall@3,f1@3,precision@5,recall@5,f1@5,fast_failed
+0.8824,0.8824,0.7647,openrouter:google/gemma-3-27b-it,OpenRouter Gemma 3 27B It,34.0,34.0,2657.08,2021.75,6398.1,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+0.8824,0.8529,0.4706,openrouter:qwen/qwen3-coder,OpenRouter Qwen3 Coder,34.0,34.0,1930.67,1617.0,3005.31,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+0.8529,0.8235,0.7353,openrouter:meta-llama/llama-3.3-70b-instruct,OpenRouter Llama 3.3 70B Instruct,34.0,34.0,2779.34,2295.04,5774.91,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+0.8529,0.7353,0.8529,openrouter:z-ai/glm-4.5-air,OpenRouter Glm 4.5 Air,34.0,34.0,5102.11,3328.1,10783.86,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+0.6765,0.8235,0.9118,openrouter:minimax/minimax-m2.5,OpenRouter Minimax M2.5,34.0,34.0,5288.45,4801.38,9040.91,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+nan,nan,nan,google,Google gemini-2.5-pro,34.0,0.0,2854.29,2776.7,3286.29,0.8137,0.7353,0.6029,0.6471,0.3039,0.7451,0.4216,0.3039,0.7451,0.4216,nan
+nan,nan,nan,openrouter:z-ai/glm-4.5-air:free,OpenRouter Glm 4.5 Air (free),34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,openrouter:minimax/minimax-m2.5:free,OpenRouter Minimax M2.5 (free),34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,openrouter:google/gemma-3-27b-it:free,OpenRouter Gemma 3 27B It (free),34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,openrouter:meta-llama/llama-3.3-70b-instruct:free,OpenRouter Llama 3.3 70B Instruct (free),34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,openrouter:nvidia/nemotron-3-super-120b-a12b,OpenRouter Nemotron 3 Super 120B A12B,34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,ollama,Ollama llama3.1,34.0,0.0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True
+nan,nan,nan,ollama,Ollama llama3.2:3b,34,0,nan,nan,nan,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,True

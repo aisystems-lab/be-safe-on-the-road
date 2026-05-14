@@ -1,0 +1,2 @@
+n_queries,isr,mrr,latency_mean_sec,latency_p50_sec,latency_p95_sec,total_latency_mean_sec,vector_store,embedding_model,reranker,used_llm,llm_provider,backend,precision@1,recall@1,f1@1,precision@3,recall@3,f1@3,precision@5,recall@5,f1@5
+34,1.0,0.8725,3.0665,3.0445,3.1249,3.0665,faiss,sentence-transformers/all-MiniLM-L6-v2,,True,ollama,V1,0.7941,0.6422,0.6912,0.3627,0.8627,0.498,0.2294,0.8873,0.3564

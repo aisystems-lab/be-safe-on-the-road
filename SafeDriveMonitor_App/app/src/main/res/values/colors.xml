@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ── Android defaults (keep these) ───────────────── -->
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- ── Okabe-Ito color-blind-safe risk palette ──────── -->
+    <color name="risk_safe">#009E73</color>       <!-- Green     -->
+    <color name="risk_caution">#56B4E9</color>    <!-- Sky blue  -->
+    <color name="risk_moderate">#E69F00</color>   <!-- Yellow    -->
+    <color name="risk_high">#D55E00</color>        <!-- Vermilion -->
+    <color name="risk_critical">#CC79A7</color>   <!-- Pink      -->
+
+    <!-- ── Dashboard surface colours ───────────────────── -->
+    <color name="bg_screen">#080D16</color>
+    <color name="bg_card">#131F2E</color>
+    <color name="bg_card_border">#1A2A3D</color>
+    <color name="text_primary">#E8F0FE</color>
+    <color name="text_secondary">#4A5A70</color>
+    <color name="text_desc">#7B8EA8</color>
+    <color name="accent_blue">#2979FF</color>
+
+    <!-- ── Previously-defined colours referenced by other ─
+         ── files in the project (do not remove these) ──── -->
+    <color name="bg_primary">#0D121C</color>
+    <color name="bg_surface">#131F2E</color>
+    <color name="bg_elevated">#1A2A3D</color>
+    <color name="dark_accent">#2979FF</color>
+    <color name="dark_bg_primary">#0D121C</color>
+    <color name="dark_bg_surface">#131F2E</color>
+    <color name="dark_text_primary">#E8F0FE</color>
+
+    <!-- Light theme equivalents -->
+    <color name="light_accent">#0072B2</color>
+    <color name="light_bg_primary">#F0F4F9</color>
+    <color name="light_bg_surface">#FFFFFF</color>
+    <color name="light_text_primary">#0D1A2A</color>
+
+    <!-- Misc colours referenced by layouts -->
+    <color name="ripple_blue">#292979FF</color>
+    <color name="accent_blue_dim">#1A2979FF</color>
+    <color name="text_dim">#4A5A70</color>
+    <color name="divider">#1A2A3D</color>
+</resources>

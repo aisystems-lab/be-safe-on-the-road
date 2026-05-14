@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ── Card 1: Risk Level ─────────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:strokeColor="@color/bg_card_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Section label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RISK LEVEL"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- Ring + centre text -->
+                <FrameLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/ring"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        app:indicatorSize="200dp"
+                        app:indicatorInset="0dp"
+                        app:trackThickness="13dp"
+                        app:indicatorColor="@color/risk_safe"
+                        app:trackColor="#1A2A3D"
+                        android:indeterminate="false"
+                        android:progress="10"
+                        android:max="100" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SAFE"
+                            android:textColor="@color/risk_safe"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.05" />
+
+                        <TextView
+                            android:id="@+id/tvLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Level 0 / 4"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- History row -->
+                <LinearLayout
+                    android:id="@+id/historyRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HISTORY"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"
+                        android:layout_marginEnd="8dp" />
+
+                    <!-- Dots injected programmatically by DashboardFragment -->
+
+                </LinearLayout>
+
+                <!-- Risk description -->
+                <TextView
+                    android:id="@+id/tvRiskLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="All clear. Drive comfortably."
+                    android:textColor="@color/text_desc"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingMultiplier="1.4" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── Card 2: Manual Override ────────────────────────── -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:strokeColor="@color/bg_card_border"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Section label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MANUAL OVERRIDE"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drag to simulate a risk level"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Slider row: Safe ── seekbar ── Critical -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Safe"
+                        android:textColor="@color/risk_safe"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="6dp" />
+
+                    <SeekBar
+                        android:id="@+id/riskBar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="4"
+                        android:progress="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Critical"
+                        android:textColor="@color/risk_critical"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="6dp" />
+
+                </LinearLayout>
+
+                <!-- Risk level quick-select buttons (injected programmatically) -->
+                <LinearLayout
+                    android:id="@+id/riskButtonsRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="5" />
+
+                <!-- Send Risk Alert button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSpeakRisk"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:text="  Send Risk Alert"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    app:backgroundTint="@color/accent_blue"
+                    app:cornerRadius="11dp"
+                    app:icon="@android:drawable/ic_dialog_info"
+                    app:iconTint="@color/white"
+                    app:iconSize="16dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

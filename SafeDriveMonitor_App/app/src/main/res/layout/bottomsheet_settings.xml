@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_surface"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="32dp">
+
+    <!-- Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <!-- Title row with dark mode toggle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Settings"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_spinner"
+            android:paddingStart="10dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dark"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                app:thumbTint="@color/accent_blue"
+                app:trackTint="@color/accent_blue_dim" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Backend URL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACKEND SERVER"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:boxBackgroundColor="@color/bg_elevated"
+        app:hintTextColor="@color/text_secondary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. http://192.168.1.63:8000"
+            android:inputType="textUri"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim"
+            android:textSize="13sp"
+            android:fontFamily="monospace" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Language -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOICE LANGUAGE"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speech recognition and responses will use this language"
+        android:textColor="@color/text_dim"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spLang"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_spinner"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Voice gender -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TTS VOICE"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spGender"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_spinner"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="28dp" />
+
+    <!-- Apply -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApply"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Save Settings"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/accent_blue"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

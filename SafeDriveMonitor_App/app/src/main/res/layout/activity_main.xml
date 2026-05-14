@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_surface"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_surface"
+            app:title="Be Safe on the Road"
+            app:titleTextColor="@color/text_primary"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            app:menu="@menu/menu_main"
+            app:navigationIcon="@null" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/bg_surface"
+            app:tabIndicatorColor="@color/accent_blue"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/accent_blue"
+            app:tabTextColor="@color/text_secondary"
+            app:tabTextAppearance="@style/TabText"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@color/ripple_blue"
+            app:tabMode="fixed" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

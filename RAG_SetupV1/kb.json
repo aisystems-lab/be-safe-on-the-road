@@ -1,0 +1,965 @@
+[
+  {
+    "id": "risk_lvl_0",
+    "text": "Risk level 0 (Safe) indicates stable following distance, optimal speed control, and focused driver attention. No corrective action is required; continue normal driving.",
+    "category": "risk_level",
+    "risk_level": 0,
+    "tags": [
+      "safe",
+      "level-0",
+      "normal",
+      "stable"
+    ]
+  },
+  {
+    "id": "risk_lvl_1",
+    "text": "Risk level 1 (Low / Caution) reflects mild deviations such as brief driver distraction or a slight reduction in following distance. The recommended response is to refocus attention and verify that the gap ahead is at least 3 seconds.",
+    "category": "risk_level",
+    "risk_level": 1,
+    "tags": [
+      "caution",
+      "level-1",
+      "distraction"
+    ]
+  },
+  {
+    "id": "risk_lvl_2",
+    "text": "Risk level 2 (Moderate) represents elevated risk from shorter headway or higher speed variance. The driver should make proactive adjustments: reduce speed, maintain lane discipline, and scan mirrors every few seconds.",
+    "category": "risk_level",
+    "risk_level": 2,
+    "tags": [
+      "moderate",
+      "level-2",
+      "headway",
+      "speed"
+    ]
+  },
+  {
+    "id": "risk_lvl_3",
+    "text": "Risk level 3 (High) captures unsafe behavioral and contextual indicators such as distracted driving, erratic movement, or close proximity to surrounding vehicles. Immediate corrective action is required: slow down, increase following distance, and put away any distraction.",
+    "category": "risk_level",
+    "risk_level": 3,
+    "tags": [
+      "high",
+      "level-3",
+      "distracted",
+      "proximity"
+    ]
+  },
+  {
+    "id": "risk_lvl_4",
+    "text": "Risk level 4 (Critical) signifies a hazard- or collision-prone situation. The system issues an emergency alert; the driver must slow down at once, regain full attention, and take evasive action if necessary, such as steering into a clear lane.",
+    "category": "risk_level",
+    "risk_level": 4,
+    "tags": [
+      "critical",
+      "level-4",
+      "emergency",
+      "collision"
+    ]
+  },
+  {
+    "id": "risk_transition_low_to_mod",
+    "text": "A transition from Low to Moderate risk usually means the headway shrank below roughly 2 seconds or a brief distraction was detected. Ease off the accelerator and re-establish the 3-second gap.",
+    "category": "risk_level",
+    "risk_level": 2,
+    "tags": [
+      "transition",
+      "headway",
+      "gap"
+    ]
+  },
+  {
+    "id": "risk_transition_mod_to_high",
+    "text": "A transition from Moderate to High risk indicates the combined effect of shrinking headway and a distracted-driver signal, or a rapid closing speed. Slow down before trying to understand the cause.",
+    "category": "risk_level",
+    "risk_level": 3,
+    "tags": [
+      "transition",
+      "combined",
+      "closing-speed"
+    ]
+  },
+  {
+    "id": "beh_safe",
+    "text": "Safe driving means both hands on the wheel, eyes on the road, steady speed, and consistent lane position. Keep this posture whenever possible.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "safe-driving",
+      "posture"
+    ]
+  },
+  {
+    "id": "beh_text_right",
+    "text": "Texting with the right hand is a significant distraction and a common pre-crash behavior. Put the phone down, place both hands on the wheel, and look ahead before resuming any interaction with the device.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "texting",
+      "phone",
+      "distraction"
+    ]
+  },
+  {
+    "id": "beh_text_left",
+    "text": "Texting with the left hand is equally dangerous as right-hand texting. Stop texting immediately and return both hands to the wheel.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "texting",
+      "phone",
+      "distraction"
+    ]
+  },
+  {
+    "id": "beh_phone_right",
+    "text": "Holding a phone to the right ear takes a hand off the wheel and narrows peripheral vision. Switch to hands-free, or if that is not possible, pull over safely before continuing the call.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "phone-call",
+      "hands-free"
+    ]
+  },
+  {
+    "id": "beh_phone_left",
+    "text": "Holding a phone to the left ear impairs the driver's ability to check the left mirror and blind spot. Use hands-free mode or end the call.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "phone-call",
+      "mirror",
+      "blind-spot"
+    ]
+  },
+  {
+    "id": "beh_radio",
+    "text": "Operating the radio or infotainment system pulls the driver's eyes off the road. Make adjustments only while stopped, or use steering-wheel controls and voice commands.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "infotainment",
+      "radio"
+    ]
+  },
+  {
+    "id": "beh_drink",
+    "text": "Drinking while driving requires at least one hand off the wheel and brief loss of visual focus. Prefer a spill-proof cup in a holder, and sip only on straight, open road.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "drinking",
+      "beverage"
+    ]
+  },
+  {
+    "id": "beh_reach_behind",
+    "text": "Reaching behind the seat rotates the driver's torso and eyes away from the road, often for several seconds. Pull over before retrieving items from the back.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "reaching",
+      "torso"
+    ]
+  },
+  {
+    "id": "beh_makeup",
+    "text": "Applying makeup or grooming while driving combines visual, manual, and cognitive distraction. Do it before departing or after arriving.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "makeup",
+      "grooming"
+    ]
+  },
+  {
+    "id": "beh_passenger",
+    "text": "Extended conversation with a passenger — especially turning to face them — can be as distracting as phone use. Keep eyes forward; conversation alone is generally fine.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "passenger",
+      "conversation"
+    ]
+  },
+  {
+    "id": "beh_drowsy",
+    "text": "Drowsy driving shows as slow reaction time, drifting between lanes, and heavy blinking. If you feel drowsy, pull over and rest for at least 15–20 minutes; coffee alone is not a reliable countermeasure.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "drowsy",
+      "fatigue",
+      "sleep"
+    ]
+  },
+  {
+    "id": "beh_aggressive",
+    "text": "Aggressive driving — tailgating, abrupt lane changes, and hard braking — raises crash risk sharply. Breathe, ease off the accelerator, and allow at least a 3-second gap.",
+    "category": "behavior",
+    "risk_level": -1,
+    "tags": [
+      "aggressive",
+      "tailgating",
+      "road-rage"
+    ]
+  },
+  {
+    "id": "sc_heavy_traffic",
+    "text": "In heavy stop-and-go traffic, keep a minimum 2-second gap, cover the brake pedal, and avoid sudden lane changes. Rear-end collisions are the most common crash type here.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "traffic",
+      "congestion",
+      "rear-end"
+    ]
+  },
+  {
+    "id": "sc_highway_merge",
+    "text": "When merging onto a highway, match the speed of highway traffic on the entrance ramp, signal early, and find a gap rather than forcing one. Never stop on the ramp unless absolutely necessary.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "highway",
+      "merge",
+      "ramp"
+    ]
+  },
+  {
+    "id": "sc_intersection",
+    "text": "At intersections, scan left-right-left before entering on green. Most intersection crashes involve one driver running a light or failing to yield — assume other drivers may do so.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "intersection",
+      "traffic-light"
+    ]
+  },
+  {
+    "id": "sc_pedestrian_crossing",
+    "text": "Near pedestrian crossings, slow down, cover the brake, and make eye contact with waiting pedestrians. Be extra cautious near schools and bus stops.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "pedestrian",
+      "crosswalk",
+      "school-zone"
+    ]
+  },
+  {
+    "id": "sc_school_zone",
+    "text": "In school zones during active hours, reduce speed to the posted limit (often 15–25 mph) and expect children to enter the roadway unpredictably.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "school-zone",
+      "children"
+    ]
+  },
+  {
+    "id": "sc_roundabout",
+    "text": "At roundabouts, yield to traffic already in the circle, signal before exiting, and do not change lanes within the roundabout.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "roundabout",
+      "yield"
+    ]
+  },
+  {
+    "id": "sc_lane_change",
+    "text": "Before changing lanes, check the mirror, signal for at least three seconds, check the blind spot, and move over smoothly. Never drift without signaling.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "lane-change",
+      "signal",
+      "blind-spot"
+    ]
+  },
+  {
+    "id": "sc_sudden_stop",
+    "text": "If the vehicle ahead brakes hard, release the accelerator, apply the brake firmly (ABS will modulate), and steer only if a clear escape path exists. Do not swerve blindly.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "emergency-brake",
+      "sudden-stop",
+      "ABS"
+    ]
+  },
+  {
+    "id": "sc_tailgater",
+    "text": "If another driver is tailgating you, move one lane right when safe and let them pass. Do not brake-check — it dramatically increases crash risk.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "tailgater",
+      "aggressive"
+    ]
+  },
+  {
+    "id": "sc_construction",
+    "text": "In construction zones, obey reduced speed limits, follow flaggers, and expect lane shifts. Fines are typically doubled and workers may be only feet from the lane.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "construction",
+      "work-zone"
+    ]
+  },
+  {
+    "id": "sc_night_driving",
+    "text": "At night, reduce speed so stopping distance fits within your headlights' reach. Dim the dashboard, use high beams on empty roads, and watch for wildlife on rural routes.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "night",
+      "headlights",
+      "wildlife"
+    ]
+  },
+  {
+    "id": "sc_emergency_vehicle",
+    "text": "When an emergency vehicle approaches with lights and siren, pull to the right and stop until it passes. On a divided highway, only vehicles traveling the same direction must yield.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "emergency-vehicle",
+      "siren",
+      "yield"
+    ]
+  },
+  {
+    "id": "sc_animal_on_road",
+    "text": "If an animal appears in the road, brake firmly in a straight line. Do not swerve for small animals — losing control is usually worse than the collision itself.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "wildlife",
+      "animal",
+      "swerve"
+    ]
+  },
+  {
+    "id": "sc_railway_crossing",
+    "text": "At a railway crossing, stop if signals are flashing, if gates are down, or if a train is visible or audible. Never stop on the tracks in traffic.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "railway",
+      "train-crossing"
+    ]
+  },
+  {
+    "id": "sc_flooded_road",
+    "text": "Do not drive through standing water of unknown depth. Six inches can stall a car and twelve inches can float most vehicles. Turn around — don't drown.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "flood",
+      "water",
+      "hydroplane"
+    ]
+  },
+  {
+    "id": "sc_mountain_road",
+    "text": "On steep downhill grades, shift to a lower gear to let the engine slow the vehicle and avoid overheating the brakes. Continuous braking can cause brake fade.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "mountain",
+      "downhill",
+      "brake-fade"
+    ]
+  },
+  {
+    "id": "sc_bicycle",
+    "text": "When passing a cyclist, leave at least 3 feet (or 1 meter) of lateral space and slow down. Check for cyclists before opening doors or making right turns across a bike lane.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "cyclist",
+      "bicycle",
+      "passing"
+    ]
+  },
+  {
+    "id": "sc_motorcycle",
+    "text": "Motorcycles are smaller and closer than they appear. Double-check blind spots and leave a full lane of space when passing or being passed by a motorcycle.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "motorcycle",
+      "blind-spot"
+    ]
+  },
+  {
+    "id": "sc_large_truck",
+    "text": "Large trucks have extensive blind spots (No-Zones) beside and behind the trailer. If you cannot see the truck's mirrors, the driver cannot see you. Pass quickly and do not linger alongside.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "truck",
+      "no-zone",
+      "blind-spot"
+    ]
+  },
+  {
+    "id": "sc_parking_lot",
+    "text": "Parking lots have frequent low-speed collisions with pedestrians and other vehicles. Drive at walking pace, use backup cameras, and expect people to appear between parked cars.",
+    "category": "scenario",
+    "risk_level": -1,
+    "tags": [
+      "parking",
+      "low-speed",
+      "backup"
+    ]
+  },
+  {
+    "id": "rule_3_second",
+    "text": "The 3-second rule: pick a fixed landmark and count the seconds between the vehicle ahead passing it and your own vehicle passing it. Below 3 seconds, back off.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "following-distance",
+      "3-second-rule"
+    ]
+  },
+  {
+    "id": "rule_4_6_second",
+    "text": "Extend the following gap to 4–6 seconds in rain, fog, snow, or when towing. Stopping distance grows faster than most drivers expect as speed and moisture increase.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "following-distance",
+      "adverse-weather"
+    ]
+  },
+  {
+    "id": "rule_speed_limit",
+    "text": "Posted speed limits are upper bounds for ideal conditions. Drive slower when visibility, traction, or traffic density degrades — the limit is not a target.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "speed-limit",
+      "conditions"
+    ]
+  },
+  {
+    "id": "rule_right_of_way",
+    "text": "Right of way is given, not taken. Even if you legally have it, yield when another road user is about to violate it — a crash you could have avoided is still a crash.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "right-of-way",
+      "defensive"
+    ]
+  },
+  {
+    "id": "rule_stop_sign",
+    "text": "At a stop sign, come to a full stop behind the line, check all directions, and proceed only when safe. Rolling through a stop sign is both illegal and dangerous.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "stop-sign"
+    ]
+  },
+  {
+    "id": "rule_yield_sign",
+    "text": "A yield sign means slow down, prepare to stop, and give way to conflicting traffic. You may proceed without stopping only if the merge is clear.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "yield-sign"
+    ]
+  },
+  {
+    "id": "rule_red_light",
+    "text": "At a red light, stop behind the stop line. Right-on-red is allowed in many regions only after a full stop and when posted signs do not prohibit it.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "red-light",
+      "right-on-red"
+    ]
+  },
+  {
+    "id": "rule_yellow_light",
+    "text": "A yellow light means stop if it is safe to do so. Do not accelerate to beat the light — intersection crashes are often severe and involve side impacts.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "yellow-light"
+    ]
+  },
+  {
+    "id": "rule_seatbelt",
+    "text": "Seatbelts roughly halve the risk of fatal injury in a crash. Every occupant should be belted, every trip, every time.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "seatbelt",
+      "safety"
+    ]
+  },
+  {
+    "id": "rule_dui",
+    "text": "Driving under the influence of alcohol, cannabis, or sedating medication drastically increases crash risk. Use a rideshare, taxi, or designated driver.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "dui",
+      "alcohol",
+      "impairment"
+    ]
+  },
+  {
+    "id": "rule_mirror_check",
+    "text": "Check mirrors every 5–8 seconds and before braking, signaling, or changing lanes. Situational awareness is the single cheapest safety upgrade.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "mirror",
+      "situational-awareness"
+    ]
+  },
+  {
+    "id": "rule_signal",
+    "text": "Signal every lane change and turn at least three seconds in advance. Other drivers cannot read your intentions without a signal.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "signal",
+      "turn",
+      "lane-change"
+    ]
+  },
+  {
+    "id": "rule_school_bus",
+    "text": "When a school bus displays flashing red lights and an extended stop arm, traffic in both directions must stop (except on divided highways). Children may cross in front of or behind the bus.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "school-bus",
+      "children"
+    ]
+  },
+  {
+    "id": "rule_headlight_use",
+    "text": "Use headlights from dusk to dawn, in rain, fog, or snow, and in tunnels. Many regions legally require headlights whenever wipers are in use.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "headlight",
+      "visibility"
+    ]
+  },
+  {
+    "id": "rule_horn",
+    "text": "Use the horn to alert, not to scold. A brief tap when a driver drifts into your lane can prevent a crash; long honks in traffic usually just raise tempers.",
+    "category": "traffic_rule",
+    "risk_level": -1,
+    "tags": [
+      "horn",
+      "communication"
+    ]
+  },
+  {
+    "id": "wx_rain_light",
+    "text": "Light rain can be more slippery than heavy rain during the first 10 minutes because oil on the pavement rises with the water. Reduce speed and increase following distance.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "rain",
+      "light-rain",
+      "slippery"
+    ]
+  },
+  {
+    "id": "wx_rain_heavy",
+    "text": "In heavy rain, drop speed by 10–20 mph below the limit, extend following distance to 5–6 seconds, use low beams, and avoid cruise control so you can react to hydroplaning.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "rain",
+      "heavy-rain",
+      "hydroplane"
+    ]
+  },
+  {
+    "id": "wx_hydroplane",
+    "text": "If the car hydroplanes (steering feels light and the car floats), ease off the accelerator, keep the wheel straight, and do not brake hard until traction returns.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "hydroplane",
+      "traction"
+    ]
+  },
+  {
+    "id": "wx_fog",
+    "text": "In fog, use low beams (high beams reflect back and worsen visibility), slow down, and use the right-edge line as a guide. Avoid stopping on the roadway.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "fog",
+      "visibility",
+      "low-beam"
+    ]
+  },
+  {
+    "id": "wx_snow",
+    "text": "On snowy roads, accelerate gently, brake early, and use the full lane width to avoid polished ice in the wheel tracks. Winter tires dramatically improve traction.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "snow",
+      "winter",
+      "traction"
+    ]
+  },
+  {
+    "id": "wx_ice",
+    "text": "Black ice often forms on bridges and overpasses first. If the road looks unusually shiny or wet in freezing temperatures, assume it is ice and slow down without sudden inputs.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "ice",
+      "black-ice",
+      "bridge"
+    ]
+  },
+  {
+    "id": "wx_wind",
+    "text": "In strong crosswinds, hold the wheel firmly and expect gusts near gaps in tree lines, bridges, and when passing tractor-trailers. High-profile vehicles are most affected.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "wind",
+      "crosswind",
+      "gust"
+    ]
+  },
+  {
+    "id": "wx_sun_glare",
+    "text": "Sun glare at sunrise and sunset can blind drivers briefly. Use the sun visor, wear polarized sunglasses, and slow down until you can see clearly.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "glare",
+      "sun",
+      "visibility"
+    ]
+  },
+  {
+    "id": "wx_storm",
+    "text": "If visibility drops to near zero in a storm, exit the roadway at a safe location, leave hazards on only after stopping, and wait for conditions to improve.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "storm",
+      "visibility",
+      "hazards"
+    ]
+  },
+  {
+    "id": "wx_heatwave",
+    "text": "In extreme heat, check tire pressure (hot air expands), watch coolant temperature, and never leave children or pets in a parked car — interior temperatures can exceed 130°F within minutes.",
+    "category": "weather",
+    "risk_level": -1,
+    "tags": [
+      "heat",
+      "tire",
+      "interior-temp"
+    ]
+  },
+  {
+    "id": "mech_tire_pressure",
+    "text": "Under-inflated tires reduce handling and fuel economy and can overheat and fail. Check pressure monthly against the sticker inside the driver's door.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "tire",
+      "pressure",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "mech_tire_tread",
+    "text": "Tread depth below 2/32 inch (1.6 mm) is legally worn. The penny test — Lincoln's head upside down in the tread — gives a quick check.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "tire",
+      "tread",
+      "wear"
+    ]
+  },
+  {
+    "id": "mech_blowout",
+    "text": "If a tire blows out at speed, do not slam the brakes. Hold the wheel straight, ease off the accelerator, and coast to a stop on the shoulder.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "blowout",
+      "tire-failure"
+    ]
+  },
+  {
+    "id": "mech_brake_warning",
+    "text": "A brake warning light or a soft brake pedal needs immediate attention. Stop driving, call for service, and do not ignore a grinding or squealing sound.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "brake",
+      "warning-light"
+    ]
+  },
+  {
+    "id": "mech_overheat",
+    "text": "If the temperature gauge spikes, turn off the air conditioning, turn on the heater to pull heat from the engine, and pull over safely. Never open a hot radiator cap.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "overheat",
+      "coolant",
+      "engine"
+    ]
+  },
+  {
+    "id": "mech_check_engine",
+    "text": "A steady check-engine light is usually non-urgent but warrants a diagnostic soon. A flashing check-engine light indicates a serious misfire — reduce load and service promptly.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "check-engine",
+      "diagnostic"
+    ]
+  },
+  {
+    "id": "mech_battery",
+    "text": "Slow cranking, dim headlights, or repeated jump-starts indicate a failing battery. Most batteries last 3–5 years.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "battery",
+      "electrical"
+    ]
+  },
+  {
+    "id": "mech_headlight_aim",
+    "text": "Misaimed headlights reduce night visibility and blind oncoming drivers. Have aim checked after any front-end work or heavy rear loading.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "headlight",
+      "aim",
+      "visibility"
+    ]
+  },
+  {
+    "id": "mech_wiper",
+    "text": "Streaky or chattering wiper blades reduce visibility in rain. Replace blades every 6–12 months or whenever they leave streaks.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "wiper",
+      "visibility",
+      "rain"
+    ]
+  },
+  {
+    "id": "mech_abs_light",
+    "text": "An ABS warning light means the anti-lock braking system is disabled; normal brakes still work but may lock up in a panic stop. Have the system serviced.",
+    "category": "mechanical",
+    "risk_level": -1,
+    "tags": [
+      "abs",
+      "warning-light",
+      "brake"
+    ]
+  },
+  {
+    "id": "faq_stereo_depth",
+    "text": "The system estimates distance to objects using a stereo camera pair and the SGBM disparity algorithm. Closer objects produce larger disparity between the left and right images.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "stereo",
+      "depth",
+      "sgbm"
+    ]
+  },
+  {
+    "id": "faq_speed_est",
+    "text": "Relative speed is estimated by tracking the centroid of each detected bounding box across frames and converting the pixel displacement to meters using the calibrated depth and focal length.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "speed",
+      "tracking",
+      "centroid"
+    ]
+  },
+  {
+    "id": "faq_yolo",
+    "text": "Objects of interest — vehicles, pedestrians, cyclists — are detected by YOLOv8, which provides bounding boxes and class labels at roughly 30 frames per second.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "yolo",
+      "detection",
+      "object"
+    ]
+  },
+  {
+    "id": "faq_driver_cnn",
+    "text": "A compact CNN classifies in-cabin frames into ten driver-state classes such as safe driving, texting, drinking, and operating the radio. The prediction becomes one of the features in the risk model.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "driver-state",
+      "cnn",
+      "classification"
+    ]
+  },
+  {
+    "id": "faq_lstm_risk",
+    "text": "An LSTM model consumes five-frame sequences of depth, relative speed, headway, and driver-state features, and outputs a continuous risk score mapped to five discrete levels from Safe to Critical.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "lstm",
+      "risk-score",
+      "temporal"
+    ]
+  },
+  {
+    "id": "faq_why_warn_low_speed",
+    "text": "A warning can fire even at low speed when headway is very short or when a distraction behavior is detected. Crash risk depends on both closing rate and attention, not speed alone.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "why-warn",
+      "low-speed",
+      "headway"
+    ]
+  },
+  {
+    "id": "faq_false_positive",
+    "text": "False positives are possible, especially in cluttered urban scenes or unusual lighting. Using the warning as a prompt to re-check the scene is safer than ignoring it.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "false-positive",
+      "reliability"
+    ]
+  },
+  {
+    "id": "faq_offline",
+    "text": "Voice queries and risk alerts run on-device: the Android app uses Vosk for offline speech-to-text and the RAG server can run locally via Ollama. No cloud round-trip is required for routine operation.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "offline",
+      "privacy",
+      "on-device"
+    ]
+  },
+  {
+    "id": "faq_report",
+    "text": "A trip report summarizes risk events, driver queries, and the explanations returned by the system. It is intended for post-trip reflection, not in-motion review.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "trip-report",
+      "pdf",
+      "review"
+    ]
+  },
+  {
+    "id": "faq_privacy",
+    "text": "The system logs queries and risk events locally; it does not transmit in-cabin video off-device. Logs can be deleted from the app settings.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "privacy",
+      "logs",
+      "data"
+    ]
+  },
+  {
+    "id": "faq_not_replacement",
+    "text": "Be Safe on the Road is a driver-assistance aid, not a replacement for attentive driving. The driver remains responsible for the vehicle at all times.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "disclaimer",
+      "responsibility"
+    ]
+  },
+  {
+    "id": "faq_language",
+    "text": "The assistant supports multilingual text-to-speech. Language and voice (female/male) can be changed in the Android app settings.",
+    "category": "system_faq",
+    "risk_level": -1,
+    "tags": [
+      "language",
+      "tts",
+      "multilingual"
+    ]
+  },
+  {
+    "id": "act_lvl_0",
+    "text": "At Safe risk, no action is needed. Maintain current speed, gap, and attention.",
+    "category": "action",
+    "risk_level": 0,
+    "tags": [
+      "action",
+      "safe"
+    ]
+  },
+  {
+    "id": "act_lvl_1",
+    "text": "At Low risk, return eyes to the road if they drifted, verify a 3-second gap to the vehicle ahead, and continue.",
+    "category": "action",
+    "risk_level": 1,
+    "tags": [
+      "action",
+      "low"
+    ]
+  },
+  {
+    "id": "act_lvl_2",
+    "text": "At Moderate risk, ease off the accelerator, extend the following gap, and scan mirrors to locate an escape lane.",
+    "category": "action",
+    "risk_level": 2,
+    "tags": [
+      "action",
+      "moderate"
+    ]
+  },
+  {
+    "id": "act_lvl_3",
+    "text": "At High risk, brake gently to increase distance, stop any secondary task (phone, food, conversation), and prepare to stop if conditions worsen.",
+    "category": "action",
+    "risk_level": 3,
+    "tags": [
+      "action",
+      "high"
+    ]
+  },
+  {
+    "id": "act_lvl_4",
+    "text": "At Critical risk, brake firmly in a straight line, steer only toward a clear escape path, and treat the alert as an imminent collision warning.",
+    "category": "action",
+    "risk_level": 4,
+    "tags": [
+      "action",
+      "critical"
+    ]
+  }
+]

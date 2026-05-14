@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Be Safe on the Road</string>
+
+    <!-- Tabs -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_assistant">Assistant</string>
+    <string name="tab_report">Report</string>
+
+    <!-- Assistant states -->
+    <string name="hint_hold_to_talk">Hold the mic to speak</string>
+    <string name="hint_hold_to_talk_sub">Release when done speaking</string>
+    <string name="state_starting">Starting…</string>
+    <string name="state_listening">Listening…</string>
+    <string name="state_processing">Processing speech…</string>
+    <string name="state_fetching">Getting answer…</string>
+
+    <!-- STT errors -->
+    <string name="stt_no_match">Didn\'t catch that — try again</string>
+    <string name="stt_network_error">Network unavailable</string>
+    <string name="stt_permission">Microphone permission required</string>
+    <string name="stt_generic_error">Recognition error — try again</string>
+
+    <!-- Fallback -->
+    <string name="assistant_fallback_answer">Sorry, I couldn\'t get an answer. Please try again.</string>
+
+    <!-- Settings -->
+    <string name="settings_saved">Settings saved</string>
+    <string name="voice_female">Female</string>
+    <string name="voice_male">Male</string>
+    <string name="dark_mode_label">Dark Mode</string>
+
+    <!-- Languages -->
+    <string name="lang_en">English</string>
+    <string name="lang_es">Spanish / Español</string>
+    <string name="lang_hi">Hindi / हिन्दी</string>
+    <string name="lang_fr">French / Français</string>
+    <string name="lang_mr">Marathi / मराठी</string>
+    <string name="lang_ja">Japanese / 日本語</string>
+    <string name="lang_de">German / Deutsch</string>
+    <string name="lang_zh">Chinese / 中文</string>
+
+    <!-- Accessibility -->
+    <string name="cd_mic_button">Hold to speak</string>
+</resources>

@@ -1,0 +1,30 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build / generated artifacts
+data/chroma_index/
+data/faiss_index/
+data/rag_meta.json
+data/eval_results.jsonl
+data/eval_summary.csv
+data/test_report.pdf
+event_log.json
+results.csv
+trip_report.pdf
+
+# OS cruft
+.DS_Store
+Thumbs.db

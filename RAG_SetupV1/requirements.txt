@@ -1,0 +1,6 @@
+flask>=3.0
+flask-cors>=4.0
+sentence-transformers>=2.6
+faiss-cpu>=1.8
+requests>=2.31
+numpy>=1.24

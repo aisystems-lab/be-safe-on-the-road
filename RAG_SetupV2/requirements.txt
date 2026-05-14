@@ -1,0 +1,48 @@
+# --- Web ---
+flask==3.0.3
+flask-cors==4.0.1
+
+# --- LangChain 0.3.x stack ---
+langchain==0.3.7
+langchain-core==0.3.19
+langchain-community==0.3.7
+langchain-text-splitters==0.3.2
+
+# LLM providers
+# Production primary + fallback (kept from v2.3 baseline)
+langchain-ollama==0.2.0
+langchain-openai==0.2.8
+
+# Multi-model comparison: pinned to versions compatible with langchain-core 0.3.x.
+# Each is optional at runtime — if the API key is missing, the provider is
+# skipped silently by llm.available_providers(). Install only what you need.
+langchain-anthropic==0.2.4
+langchain-google-genai==2.0.6
+langchain-groq==0.2.1
+langchain-mistralai==0.2.2
+
+# Vector stores
+langchain-chroma==0.1.4
+chromadb==0.5.20
+faiss-cpu==1.9.0.post1
+
+# Embeddings / reranker
+sentence-transformers==3.2.1
+torch>=2.1.0
+transformers>=4.44.0
+
+# BM25 lexical retriever
+rank-bm25==0.2.2
+
+# Config
+pydantic==2.9.2
+pydantic-settings==2.6.1
+
+# Utilities
+requests>=2.32.0
+numpy>=1.26.4
+pandas>=2.2.3
+tqdm>=4.66.5
+
+# PDF reports
+reportlab==4.2.5

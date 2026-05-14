@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Circular mic button — normal state: deep navy with blue border -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed / selected (listening) state -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="#2979FF" />
+            <stroke android:width="2dp" android:color="#5B9BFF" />
+        </shape>
+    </item>
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#2063CC" />
+            <stroke android:width="2dp" android:color="#2979FF" />
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#1A2A3D" />
+            <stroke android:width="2dp" android:color="#2979FF" />
+        </shape>
+    </item>
+
+</selector>
