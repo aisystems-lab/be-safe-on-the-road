@@ -1,4 +1,4 @@
-# SafeDriveMonitor – v2
+# SafeDriveMonitor
 
 ## How to open in Android Studio
 1. Unzip the downloaded folder
@@ -10,7 +10,7 @@
 
 ---
 
-## What's new in v2
+## Features
 
 ### 9-language voice support
 Voice queries are recognised in the selected language via Android's built-in
@@ -47,10 +47,3 @@ Add your IP to `app/src/main/res/xml/network_security_config.xml` if it differs.
 
 ---
 
-## Notes
-- The Vosk offline STT model (`vosk-model-small-en-us-0.15`) in `assets/` is kept
-  for reference but is no longer used by AssistantFragment — Android's built-in
-  `SpeechRecognizer` handles all languages. You may delete the model folder to
-  reduce APK size (~50 MB saved).
-- `RECORD_AUDIO` and `INTERNET` permissions are declared in `AndroidManifest.xml`.
-- Minimum SDK: **API 24** (Android 7.0)

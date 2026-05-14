@@ -1,6 +1,6 @@
-# SafeDriveMonitor
+# Be Safe on the Road 🚗
 
-A driver safety system combining an Android app, three iterations of a retrieval-augmented generation (RAG) backend, and the supporting ML / data-analysis notebooks.
+A driver safety system combining an Android app, three iterations of a retrieval-augmented generation (RAG) backend, and the supporting ML and CV analysis notebooks.
 
 ## Repository layout
 
@@ -18,13 +18,13 @@ SafeDriveMonitor/
 
 ## The three RAG setups
 
-The three backends exist so the project can compare RAG architectures on the same 34-question evaluation set. They expose the same Flask endpoints (`/ask`, `/risk_alert`, `/events`, `/report`, `/export_csv`), so the Android app talks to any of them without code changes.
+The three backends exist so the project can compare RAG architectures on the same question evaluation set. They expose the same Flask endpoints (`/ask`, `/risk_alert`, `/events`, `/report`, `/export_csv`), so the Android app talks to any of them without code changes.
 
-| Setup | Stack | Purpose |
+| Setup | Stack |
 | --- | --- | --- |
-| `RAG_SetupV1` | Plain Python, FAISS, hand-rolled retrieval | Baseline |
-| `RAG_SetupV1_5` | Partial LangChain (retriever + LCEL) | Isolates "using a framework" from advanced techniques |
-| `RAG_SetupV2` | Full LangChain: hybrid BM25 + dense, cross-encoder reranking, structured Pydantic output, multi-LLM router | **Production version — integrated with the Android app** |
+| `RAG_SetupV1` | Plain Python, FAISS, hand-rolled retrieval |
+| `RAG_SetupV1_5` | Partial LangChain (retriever + LCEL) |
+| `RAG_SetupV2` | Full LangChain: hybrid BM25 + dense, cross-encoder reranking, structured Pydantic output, multi-LLM router | 
 
 See each folder's `README.md` for setup and run instructions.
 
@@ -36,7 +36,7 @@ Features include 9-language voice support, light/dark mode, color-blind-safe ris
 
 ## Notebooks
 
-The three notebooks cover the ML components developed alongside the RAG work — driver behavior clustering, risk-level prediction, and the depth-estimation model. They are exploratory and self-contained.
+The three notebooks cover the ML components developed alongside the RAG work — driver behavior clustering, risk-level prediction, and the depth ans speed estimation model.
 
 ## Configuration
 
