@@ -21,7 +21,7 @@ SafeDriveMonitor/
 The three backends exist so the project can compare RAG architectures on the same question evaluation set. They expose the same Flask endpoints (`/ask`, `/risk_alert`, `/events`, `/report`, `/export_csv`), so the Android app talks to any of them without code changes.
 
 | Setup | Stack |
-| --- | --- | --- |
+| --- | --- |
 | `RAG_SetupV1` | Plain Python, FAISS, hand-rolled retrieval |
 | `RAG_SetupV1_5` | Partial LangChain (retriever + LCEL) |
 | `RAG_SetupV2` | Full LangChain: hybrid BM25 + dense, cross-encoder reranking, structured Pydantic output, multi-LLM router | 
