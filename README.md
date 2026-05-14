@@ -1,4 +1,4 @@
-# SafeDriveMonitor
+# Be Safe on the Road 🚗
 
 A driver safety system combining an Android app, three iterations of a retrieval-augmented generation (RAG) backend, and the supporting ML / data-analysis notebooks.
 
