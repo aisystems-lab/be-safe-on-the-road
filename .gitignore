@@ -51,3 +51,4 @@ chroma_db/
 data/index/
 data/eval_results.jsonl
 event_log.json
+eval_results.jsonl
